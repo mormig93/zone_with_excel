@@ -1,0 +1,28 @@
+{
+  "name": "send_to_social",
+  "version": "1.0.0",
+  "description": "aplicacion para enviar contenido a telegram proveniente de un file csv",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "dev": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "morillomig93",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "xlsx": "^0.18.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morillomig93/zonedeal.git"
+  },
+  "keywords": [
+    "zone"
+  ],
+  "bugs": {
+    "url": "https://github.com/morillomig93/zonedeal/issues"
+  },
+  "homepage": "https://github.com/morillomig93/zonedeal#readme"
+}
