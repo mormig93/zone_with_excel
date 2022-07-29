@@ -1,33 +1,9 @@
 const axios = require("axios").default;
 const reader = require('xlsx')
-let file_name = null
-let time_per_post = null
-
-const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
-
-console.log('ingresar el nombre del archivo en el directorio data del proyecto\n')
-readline.question('nombre del archivo excel > ', line => {
-    file_name = line
-    readline.question('ingresar el tiempo en segundos...!\ntiempo entre cada post > ', line_2 => {
-        if (isNaN(line_2)) {
-            console.log(`${line_2} no es un numero`);
-            readline.close();
-        } else {
-            time_per_post = parseInt(line_2) * 1000
-            return time_per_post
-            //readline.close();
-        }
-    })
-    return file_name
-    //readline.close();
-});
+const time_per_post = (5 * 60) * 1000
 
 // Reading our data file
-const file = reader.readFile(file_name)
+const file = reader.readFile('./data/weekend.xlsx')
 
 //data temporal mientras se almacena 
 const temporal_data = reader.utils.sheet_to_json(file.Sheets[file.SheetNames[0]])
