@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: iniciar el codigo
-      - run: npm start
+      - run: npm run start
