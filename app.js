@@ -1,6 +1,6 @@
 const axios = require("axios").default;
 const reader = require('xlsx')
-const time_per_post = (5 * 60) * 1000
+const time_per_post = (5) * 1000
 
 // Reading our data file
 const file = reader.readFile('./data/weekend.xlsx')
